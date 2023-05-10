@@ -1,0 +1,19 @@
+{% extends "investigation/layout.html" %}
+
+{% block title %}
+Crypto
+{% endblock %}
+
+{% block body %}
+<h3>Check Validation</h3>
+<form action="{% url 'publicKeyCheck' %}" method="POST">
+    {% csrf_token %}
+    <label for="publicKey">Public key: </label>
+    <input type="text" id="publicKey" name="key" placeholder="public key">
+    <input type="submit" value="check" class="btn btn-primary">
+</form><br>
+<div class="result">
+    <h6>{{key}}: {{message}}</h6>
+    <p>API fetch data: {{data}}</p>
+</div>
+{% endblock %}
