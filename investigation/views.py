@@ -28,35 +28,35 @@ def publicKeyCheck(request):
         return render(request, "investigation/index.html", {
             "key": key,
             "data": data,
-            "message": "Valid Bitcoin"
+            "message": "valid bitcoin"
         })
     elif ether.is_valid_ethereum_address(key):
         return render(request, "investigation/index.html", {
             "key": key,
-            "message": "Valid Ethereum"
+            "message": "valid ethereum"
         })
     elif tether.is_valid_tether_address(key):
         return render(request, "investigation/index.html", {
             "key": key,
-            "message": "Valid Tether"
+            "message": "valid tether"
         })
     elif monero.is_valid_monero_address(key):
         return render(request, "investigation/index.html", {
             "key": key,
-            "message": "Valid Monero"
+            "message": "valid monero"
         })
     elif dash.is_valid_dash_address(key):
         return render(request, "investigation/index.html", {
             "key": key,
-            "message": "Valid Dash"
+            "message": "valid dash"
         })
     elif dogecoin.is_valid_dogecoin_address(key):
         return render(request, "investigation/index.html", {
             "key": key,
-            "message": "Valid Dogecoin"
+            "message": "valid dogecoin"
         })
     else:
         return render(request, "investigation/index.html", {
             "key": key,
-            "message": "Not a valid currency"
+            "message": "not a valid cryptocurrency"
         })

@@ -1,19 +1,47 @@
 {% extends "investigation/layout.html" %}
 
 {% block title %}
-Crypto
+Crypto Key Validation
 {% endblock %}
 
 {% block body %}
-<h3>Check Validation</h3>
-<form action="{% url 'publicKeyCheck' %}" method="POST">
-    {% csrf_token %}
-    <label for="publicKey">Public key: </label>
-    <input type="text" id="publicKey" name="key" placeholder="public key">
-    <input type="submit" value="check" class="btn btn-primary">
-</form><br>
-<div class="result">
-    <h6>{{key}}: {{message}}</h6>
-    <p>API fetch data: {{data}}</p>
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0">public key validation</h3>
+        </div>
+        <div class="card-body">
+            <form action="{% url 'publicKeyCheck' %}" method="POST" class="row g-3">
+                {% csrf_token %}
+                <div class="col-md-12">
+                    <label for="publicKey" class="form-label">public key</label>
+                    <input type="text" id="publicKey" name="key" class="form-control form-control-lg"
+                        placeholder="enter public key" required>
+                </div>
+                <div class="col-12">
+                    <!-- Added margin to create a gap between the input and the button -->
+                    <button type="submit" class="btn btn-primary btn-lg shadow-sm mt-2"
+                        style="background-color: #4B7BFA; border: none;">
+                        <strong>check key</strong>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        {% if key %}
+        <div class="alert alert-info" role="alert">
+            <h6 class="mb-1">key: {{ key }}</h6>
+            <p class="mb-0">result: {{ message }}</p>
+        </div>
+        {% endif %}
+        {% if data %}
+        <div class="alert alert-secondary" role="alert">
+            <h6 class="mb-1">api fetched data:</h6>
+            <p class="mb-0">{{ data }}</p>
+        </div>
+        {% endif %}
+    </div>
 </div>
 {% endblock %}
