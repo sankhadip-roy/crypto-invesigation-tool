@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-f=xddv0$av=u368=lm)c0uzf=ggs^ykw4=dc1akrb8f3hoq@n2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['0.0.0.0','sankha-crypto.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://sankha-crypto.onrender.com']
 
 # Application definition
 

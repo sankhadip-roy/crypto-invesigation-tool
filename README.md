@@ -52,3 +52,5 @@
 ![image](https://github.com/user-attachments/assets/148fb8ba-a655-4567-889d-c69fd08c5ee4)
 
 - **[presentation](https://youtu.be/nRpRPiPnX-I?si=HpQjt-PlPXMDGeU1)**
+
+**`docker image: docker pull sankhadiproy/crypto:latest `**
