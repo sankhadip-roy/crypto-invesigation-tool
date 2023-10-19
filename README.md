@@ -49,7 +49,7 @@
 
 > flowchart
 
-![image](https://github.com/user-attachments/assets/148fb8ba-a655-4567-889d-c69fd08c5ee4)
+![image](https://github.com/user-attachments/assets/c843b0f3-7a05-48b4-ab67-69eb5a36abbf)
 
 - **[presentation](https://youtu.be/nRpRPiPnX-I?si=HpQjt-PlPXMDGeU1)**
 
